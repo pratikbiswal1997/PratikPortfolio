@@ -1,0 +1,157 @@
+/* 
+.fact__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+.fact__item {
+  text-align: center;
+  min-width: 180px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.fact__item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.odometer__wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.odometer {
+  font-size: 52px;
+  font-weight: 800;
+  color: #00f7ff;
+  line-height: 1;
+}
+
+.suffix {
+  font-size: 30px;
+  font-weight: 600;
+  color: #00f7ff;
+  margin-bottom: 4px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #d0d0d0;
+  letter-spacing: 0.6px;
+  margin-top: 8px;
+} */
+
+
+.fact__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+.fact__item {
+  flex: 1 1 200px;
+  max-width: 280px;
+  text-align: center;
+  padding: 24px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.fact__item:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.odometer__wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.odometer {
+  font-size: 48px;
+  font-weight: 800;
+  color: #00f7ff;
+  line-height: 1;
+  word-break: break-word;
+}
+
+.suffix {
+  font-size: 28px;
+  font-weight: 600;
+  color: #00f7ff;
+  margin-bottom: 4px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #d0d0d0;
+  letter-spacing: 0.6px;
+  margin-top: 8px;
+}
+
+/* ✅ Responsive styles */
+
+@media (max-width: 768px) {
+  .fact__container {
+    padding: 40px 10px;
+    gap: 30px;
+  }
+
+  .odometer {
+    font-size: 36px;
+  }
+
+  .suffix {
+    font-size: 22px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fact__item {
+    padding: 16px;
+    max-width: 90%;
+  }
+
+  .odometer {
+    font-size: 30px;
+  }
+
+  .suffix {
+    font-size: 18px;
+  }
+
+  .label {
+    font-size: 13px;
+  }
+}

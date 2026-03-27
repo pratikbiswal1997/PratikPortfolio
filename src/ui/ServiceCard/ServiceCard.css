@@ -1,0 +1,117 @@
+.service-card {
+  --card-bg: rgba(var(--color-primary-rgb, 255, 255, 255), 0.05);
+  --card-shadow: 0 6px 20px rgba(var(--color-primary-rgb, 0, 255, 255), 0.2);
+
+  background: var(--card-bg);
+  border: 1px solid rgba(var(--color-primary-rgb, 255, 255, 255), 0.2);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  max-width: 340px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(var(--color-primary-rgb, 0, 255, 255), 0.3);
+}
+
+.icon-wrapper {
+  font-size: 2.8rem;
+  background: rgba(var(--color-primary-rgb, 255, 255, 255), 0.1);
+  color: var(--color-primary, #00f7ff);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(var(--color-primary-rgb, 0, 255, 255), 0.3);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.card-title span {
+  background: linear-gradient(
+    to right,
+    var(--color-primary, #00f7ff),
+    #fff
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #ccc;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 0.5rem;
+  flex-grow: 1;
+}
+
+.social-section {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .service-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .icon-wrapper {
+    font-size: 2rem;
+    width: 52px;
+    height: 52px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .icon-wrapper {
+    font-size: 1.8rem;
+    width: 48px;
+    height: 48px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+  }
+}

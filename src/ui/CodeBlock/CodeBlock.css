@@ -1,0 +1,188 @@
+/* .code__block {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(var(--color-primary-rgb), 0.03);
+}
+
+
+.flex__center.dot__container {
+  display: flex;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+.code__block pre {
+  margin-top: 40px !important; 
+}
+
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff5f56;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.dot:nth-child(2) {
+  background-color: #ffbd2e;
+}
+
+.dot:nth-child(3) {
+  background-color: #27c93f;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+}
+
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: #00f7ff;
+  font-size: 13px;
+  cursor: pointer;
+  z-index: 2;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.copy-btn:hover {
+  color: white;
+} */
+.code__block {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(var(--color-primary-rgb), 0.03);
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Dot bar */
+.flex__center.dot__container {
+  display: flex;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Push code down to leave space for dots */
+.code__block pre {
+  margin-top: 48px !important;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Dots */
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff5f56;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.dot:nth-child(2) {
+  background-color: #ffbd2e;
+}
+
+.dot:nth-child(3) {
+  background-color: #27c93f;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+}
+
+/* Optional Copy Button */
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: #00f7ff;
+  font-size: 13px;
+  cursor: pointer;
+  z-index: 2;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.copy-btn:hover {
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .flex__center.dot__container {
+    padding: 8px 12px;
+  }
+
+  .copy-btn {
+    font-size: 12px;
+    top: 8px;
+    right: 12px;
+  }
+
+  .code__block pre {
+    font-size: 13px;
+    margin-top: 42px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .dot {
+    width: 9px;
+    height: 9px;
+  }
+
+  .code__block {
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+
+  .copy-btn {
+    font-size: 11px;
+    top: 6px;
+    right: 10px;
+  }
+
+  .code__block pre {
+    font-size: 12.5px;
+    margin-top: 40px !important;
+    padding: 16px;
+  }
+}
